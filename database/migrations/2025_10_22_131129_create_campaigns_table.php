@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('featured_image')->nullable();
             $table->boolean('status')->default(true);
             $table->boolean('recommended')->default(false);
-            $table->foreignId('categories_id')->constrained('category_campaigns')->cascadeOnUpdate('cascade')->cascadeOnDelete('cascade');
+            $table->foreignId('category_id')->constrained('category_campaigns')->cascadeOnUpdate('cascade')->cascadeOnDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->cascadeOnUpdate('cascade')->cascadeOnDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
