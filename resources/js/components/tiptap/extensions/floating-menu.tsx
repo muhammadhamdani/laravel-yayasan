@@ -9,7 +9,8 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { useDebounce } from '@/hooks/use-debounce';
 import { cn } from '@/lib/utils';
 import type { Editor } from '@tiptap/core';
-import { FloatingMenu } from '@tiptap/react';
+import { EditorState } from '@tiptap/pm/state';
+import { FloatingMenu } from '@tiptap/react/menus'; // ✅ FIXED
 import {
     AlignCenter,
     AlignLeft,
@@ -32,7 +33,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 interface CommandItemType {
     title: string;
     description: string;
-    icon: entType<{ className?: string }>;
+    icon: any;
     keywords: string;
     command: (editor: Editor) => void;
     group: string;
@@ -108,7 +109,11 @@ const groups: CommandGroupType[] = [
                 icon: ImageIcon,
                 keywords: 'image picture photo',
                 command: (editor) =>
-                    editor.chain().focus().insertImagePlaceholder().run(),
+                    editor
+                        .chain()
+                        .focus()
+                        .insertContent("<img src='' alt='' />")
+                        .run(),
             },
             {
                 title: 'Horizontal Rule',
@@ -255,24 +260,16 @@ export function TipTapFloatingMenu({ editor }: { editor: Editor }) {
             switch (e.key) {
                 case 'ArrowDown':
                     preventDefault();
-                    setSelectedIndex((prev) => {
-                        if (prev === -1) return 0;
-                        return prev < flatFilteredItems.length - 1
-                            ? prev + 1
-                            : 0;
-                    });
+                    setSelectedIndex((prev) =>
+                        prev < flatFilteredItems.length - 1 ? prev + 1 : 0,
+                    );
                     break;
-
                 case 'ArrowUp':
                     preventDefault();
-                    setSelectedIndex((prev) => {
-                        if (prev === -1) return flatFilteredItems.length - 1;
-                        return prev > 0
-                            ? prev - 1
-                            : flatFilteredItems.length - 1;
-                    });
+                    setSelectedIndex((prev) =>
+                        prev > 0 ? prev - 1 : flatFilteredItems.length - 1,
+                    );
                     break;
-
                 case 'Enter':
                     preventDefault();
                     const targetIndex =
@@ -281,7 +278,6 @@ export function TipTapFloatingMenu({ editor }: { editor: Editor }) {
                         executeCommand(flatFilteredItems[targetIndex].command);
                     }
                     break;
-
                 case 'Escape':
                     preventDefault();
                     setIsOpen(false);
@@ -293,18 +289,17 @@ export function TipTapFloatingMenu({ editor }: { editor: Editor }) {
     );
 
     useEffect(() => {
-        if (!editor?.options.element) return;
+        const element = editor?.options.element as HTMLElement;
+        if (!element) return;
 
-        const editorElement = editor.options.element;
         const handleEditorKeyDown = (e: Event) =>
             handleKeyDown(e as KeyboardEvent);
 
-        editorElement.addEventListener('keydown', handleEditorKeyDown);
+        element.addEventListener('keydown', handleEditorKeyDown);
         return () =>
-            editorElement.removeEventListener('keydown', handleEditorKeyDown);
+            element.removeEventListener('keydown', handleEditorKeyDown);
     }, [handleKeyDown, editor]);
 
-    // Add new effect for resetting selectedIndex
     useEffect(() => {
         setSelectedIndex(-1);
     }, [search]);
@@ -318,7 +313,7 @@ export function TipTapFloatingMenu({ editor }: { editor: Editor }) {
     return (
         <FloatingMenu
             editor={editor}
-            shouldShow={({ state }) => {
+            shouldShow={({ state }: { state: EditorState }) => {
                 if (!editor) return false;
 
                 const { $from } = state.selection;
@@ -344,15 +339,7 @@ export function TipTapFloatingMenu({ editor }: { editor: Editor }) {
                 if (!isOpen) setIsOpen(true);
                 return true;
             }}
-            tippyOptions={{
-                placement: 'bottom-start',
-                interactive: true,
-                appendTo: () => document.body,
-                onHide: () => {
-                    setIsOpen(false);
-                    setSelectedIndex(-1);
-                },
-            }}
+            className="z-50 w-72 rounded-lg border bg-popover shadow-lg"
         >
             <Command
                 role="listbox"

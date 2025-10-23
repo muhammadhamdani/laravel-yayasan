@@ -2,7 +2,8 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { useMediaQuery } from '@/hooks/use-media-querry';
-import { BubbleMenu, type Editor } from '@tiptap/react';
+import { Editor } from '@tiptap/core';
+import { BubbleMenu } from '@tiptap/react/menus';
 import { useEffect } from 'react';
 import { AlignmentTooolbar } from '../toolbars/alignment';
 import { BlockquoteToolbar } from '../toolbars/blockquote';
@@ -24,14 +25,25 @@ export function FloatingToolbar({ editor }: { editor: Editor | null }) {
     useEffect(() => {
         if (!editor?.options.element || !isMobile) return;
 
+        let el: HTMLElement | null = null;
+
+        const element = editor.options.element;
+
+        if (element instanceof HTMLElement) {
+            el = element;
+        } else if (typeof element === 'object' && 'mount' in element) {
+            el = element.mount as HTMLElement;
+        }
+
+        if (!el) return;
+
         const handleContextMenu = (e: Event) => {
             e.preventDefault();
         };
 
-        const el = editor.options.element;
         el.addEventListener('contextmenu', handleContextMenu);
 
-        return () => el.removeEventListener('contextmenu', handleContextMenu);
+        return () => el?.removeEventListener('contextmenu', handleContextMenu);
     }, [editor, isMobile]);
 
     if (!editor) return null;
@@ -40,11 +52,6 @@ export function FloatingToolbar({ editor }: { editor: Editor | null }) {
         return (
             <TooltipProvider>
                 <BubbleMenu
-                    tippyOptions={{
-                        duration: 100,
-                        placement: 'bottom',
-                        offset: [0, 10],
-                    }}
                     shouldShow={() => {
                         // Show toolbar when editor is focused and has selection
                         return editor.isEditable && editor.isFocused;

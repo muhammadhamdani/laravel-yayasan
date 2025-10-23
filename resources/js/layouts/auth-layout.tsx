@@ -2,7 +2,7 @@ import { Toaster } from '@/components/ui/sonner';
 import AuthLayoutTemplate from '@/layouts/auth/auth-split-layout';
 import { SharedData } from '@/types';
 import { usePage } from '@inertiajs/react';
-import { useEffect } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { toast } from 'sonner';
 
 export default function AuthLayout({
