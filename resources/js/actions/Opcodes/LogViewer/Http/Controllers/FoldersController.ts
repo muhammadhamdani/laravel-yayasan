@@ -79,7 +79,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     index.form = indexForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
 export const requestDownload = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -94,7 +94,7 @@ requestDownload.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
 requestDownload.url = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -122,7 +122,7 @@ requestDownload.url = (args: { folderIdentifier: string | number } | [folderIden
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
 requestDownload.get = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -131,7 +131,7 @@ requestDownload.get = (args: { folderIdentifier: string | number } | [folderIden
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
 requestDownload.head = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -141,7 +141,7 @@ requestDownload.head = (args: { folderIdentifier: string | number } | [folderIde
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
     const requestDownloadForm = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -151,7 +151,7 @@ requestDownload.head = (args: { folderIdentifier: string | number } | [folderIde
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
         requestDownloadForm.get = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -160,7 +160,7 @@ requestDownload.head = (args: { folderIdentifier: string | number } | [folderIde
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:51
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:42
  * @route '/log-viewer/api/folders/{folderIdentifier}/download/request'
  */
         requestDownloadForm.head = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -176,7 +176,7 @@ requestDownload.head = (args: { folderIdentifier: string | number } | [folderIde
     requestDownload.form = requestDownloadForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:75
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:66
  * @route '/log-viewer/api/folders/{folderIdentifier}/clear-cache'
  */
 export const clearCache = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -191,7 +191,7 @@ clearCache.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:75
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:66
  * @route '/log-viewer/api/folders/{folderIdentifier}/clear-cache'
  */
 clearCache.url = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -219,7 +219,7 @@ clearCache.url = (args: { folderIdentifier: string | number } | [folderIdentifie
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:75
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:66
  * @route '/log-viewer/api/folders/{folderIdentifier}/clear-cache'
  */
 clearCache.post = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -229,7 +229,7 @@ clearCache.post = (args: { folderIdentifier: string | number } | [folderIdentifi
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:75
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:66
  * @route '/log-viewer/api/folders/{folderIdentifier}/clear-cache'
  */
     const clearCacheForm = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -239,7 +239,7 @@ clearCache.post = (args: { folderIdentifier: string | number } | [folderIdentifi
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:75
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:66
  * @route '/log-viewer/api/folders/{folderIdentifier}/clear-cache'
  */
         clearCacheForm.post = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -250,7 +250,7 @@ clearCache.post = (args: { folderIdentifier: string | number } | [folderIdentifi
     clearCache.form = clearCacheForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:86
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:77
  * @route '/log-viewer/api/folders/{folderIdentifier}'
  */
 export const deleteMethod = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -265,7 +265,7 @@ deleteMethod.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:86
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:77
  * @route '/log-viewer/api/folders/{folderIdentifier}'
  */
 deleteMethod.url = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -293,7 +293,7 @@ deleteMethod.url = (args: { folderIdentifier: string | number } | [folderIdentif
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:86
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:77
  * @route '/log-viewer/api/folders/{folderIdentifier}'
  */
 deleteMethod.delete = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -303,7 +303,7 @@ deleteMethod.delete = (args: { folderIdentifier: string | number } | [folderIden
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:86
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:77
  * @route '/log-viewer/api/folders/{folderIdentifier}'
  */
     const deleteMethodForm = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -318,7 +318,7 @@ deleteMethod.delete = (args: { folderIdentifier: string | number } | [folderIden
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:86
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:77
  * @route '/log-viewer/api/folders/{folderIdentifier}'
  */
         deleteMethodForm.delete = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -334,7 +334,7 @@ deleteMethod.delete = (args: { folderIdentifier: string | number } | [folderIden
     deleteMethod.form = deleteMethodForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
 export const download = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -349,7 +349,7 @@ download.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
 download.url = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -377,7 +377,7 @@ download.url = (args: { folderIdentifier: string | number } | [folderIdentifier:
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
 download.get = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -386,7 +386,7 @@ download.get = (args: { folderIdentifier: string | number } | [folderIdentifier:
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
 download.head = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -396,7 +396,7 @@ download.head = (args: { folderIdentifier: string | number } | [folderIdentifier
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
     const downloadForm = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -406,7 +406,7 @@ download.head = (args: { folderIdentifier: string | number } | [folderIdentifier
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
         downloadForm.get = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -415,7 +415,7 @@ download.head = (args: { folderIdentifier: string | number } | [folderIdentifier
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FoldersController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:68
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FoldersController.php:59
  * @route '/log-viewer/api/folders/{folderIdentifier}/download'
  */
         downloadForm.head = (args: { folderIdentifier: string | number } | [folderIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

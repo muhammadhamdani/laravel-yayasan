@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults, validateParameters } from './../../../../../wayfinder'
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 const IndexController = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ IndexController.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 IndexController.url = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -48,7 +48,7 @@ IndexController.url = (args?: { view?: string | number } | [view: string | numbe
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 IndexController.get = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -57,7 +57,7 @@ IndexController.get = (args?: { view?: string | number } | [view: string | numbe
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 IndexController.head = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -67,7 +67,7 @@ IndexController.head = (args?: { view?: string | number } | [view: string | numb
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
     const IndexControllerForm = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -77,7 +77,7 @@ IndexController.head = (args?: { view?: string | number } | [view: string | numb
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
         IndexControllerForm.get = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -86,7 +86,7 @@ IndexController.head = (args?: { view?: string | number } | [view: string | numb
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
         IndexControllerForm.head = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

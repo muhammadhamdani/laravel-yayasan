@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../../../wayfinder'
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ index.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ index.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
     const indexForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -54,7 +54,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
         indexForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -63,7 +63,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::index
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
         indexForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -79,7 +79,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     index.form = indexForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
 export const requestDownload = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -94,7 +94,7 @@ requestDownload.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
 requestDownload.url = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -122,7 +122,7 @@ requestDownload.url = (args: { fileIdentifier: string | number } | [fileIdentifi
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
 requestDownload.get = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -131,7 +131,7 @@ requestDownload.get = (args: { fileIdentifier: string | number } | [fileIdentifi
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
 requestDownload.head = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -141,7 +141,7 @@ requestDownload.head = (args: { fileIdentifier: string | number } | [fileIdentif
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
     const requestDownloadForm = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -151,7 +151,7 @@ requestDownload.head = (args: { fileIdentifier: string | number } | [fileIdentif
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
         requestDownloadForm.get = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -160,7 +160,7 @@ requestDownload.head = (args: { fileIdentifier: string | number } | [fileIdentif
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::requestDownload
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:26
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:35
  * @route '/log-viewer/api/files/{fileIdentifier}/download/request'
  */
         requestDownloadForm.head = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -176,7 +176,7 @@ requestDownload.head = (args: { fileIdentifier: string | number } | [fileIdentif
     requestDownload.form = requestDownloadForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:50
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:59
  * @route '/log-viewer/api/files/{fileIdentifier}/clear-cache'
  */
 export const clearCache = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -191,7 +191,7 @@ clearCache.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:50
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:59
  * @route '/log-viewer/api/files/{fileIdentifier}/clear-cache'
  */
 clearCache.url = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -219,7 +219,7 @@ clearCache.url = (args: { fileIdentifier: string | number } | [fileIdentifier: s
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:50
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:59
  * @route '/log-viewer/api/files/{fileIdentifier}/clear-cache'
  */
 clearCache.post = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -229,7 +229,7 @@ clearCache.post = (args: { fileIdentifier: string | number } | [fileIdentifier: 
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:50
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:59
  * @route '/log-viewer/api/files/{fileIdentifier}/clear-cache'
  */
     const clearCacheForm = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -239,7 +239,7 @@ clearCache.post = (args: { fileIdentifier: string | number } | [fileIdentifier: 
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCache
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:50
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:59
  * @route '/log-viewer/api/files/{fileIdentifier}/clear-cache'
  */
         clearCacheForm.post = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -250,7 +250,7 @@ clearCache.post = (args: { fileIdentifier: string | number } | [fileIdentifier: 
     clearCache.form = clearCacheForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:81
  * @route '/log-viewer/api/files/{fileIdentifier}'
  */
 export const deleteMethod = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -265,7 +265,7 @@ deleteMethod.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:81
  * @route '/log-viewer/api/files/{fileIdentifier}'
  */
 deleteMethod.url = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -293,7 +293,7 @@ deleteMethod.url = (args: { fileIdentifier: string | number } | [fileIdentifier:
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:81
  * @route '/log-viewer/api/files/{fileIdentifier}'
  */
 deleteMethod.delete = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -303,7 +303,7 @@ deleteMethod.delete = (args: { fileIdentifier: string | number } | [fileIdentifi
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:81
  * @route '/log-viewer/api/files/{fileIdentifier}'
  */
     const deleteMethodForm = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -318,7 +318,7 @@ deleteMethod.delete = (args: { fileIdentifier: string | number } | [fileIdentifi
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMethod
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:81
  * @route '/log-viewer/api/files/{fileIdentifier}'
  */
         deleteMethodForm.delete = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -334,7 +334,7 @@ deleteMethod.delete = (args: { fileIdentifier: string | number } | [fileIdentifi
     deleteMethod.form = deleteMethodForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCacheAll
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:63
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
  * @route '/log-viewer/api/clear-cache-all'
  */
 export const clearCacheAll = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -349,7 +349,7 @@ clearCacheAll.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCacheAll
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:63
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
  * @route '/log-viewer/api/clear-cache-all'
  */
 clearCacheAll.url = (options?: RouteQueryOptions) => {
@@ -358,7 +358,7 @@ clearCacheAll.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCacheAll
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:63
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
  * @route '/log-viewer/api/clear-cache-all'
  */
 clearCacheAll.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -368,7 +368,7 @@ clearCacheAll.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCacheAll
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:63
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
  * @route '/log-viewer/api/clear-cache-all'
  */
     const clearCacheAllForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -378,7 +378,7 @@ clearCacheAll.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::clearCacheAll
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:63
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:72
  * @route '/log-viewer/api/clear-cache-all'
  */
         clearCacheAllForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -389,7 +389,7 @@ clearCacheAll.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
     clearCacheAll.form = clearCacheAllForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMultipleFiles
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:89
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:98
  * @route '/log-viewer/api/delete-multiple-files'
  */
 export const deleteMultipleFiles = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -404,7 +404,7 @@ deleteMultipleFiles.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMultipleFiles
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:89
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:98
  * @route '/log-viewer/api/delete-multiple-files'
  */
 deleteMultipleFiles.url = (options?: RouteQueryOptions) => {
@@ -413,7 +413,7 @@ deleteMultipleFiles.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMultipleFiles
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:89
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:98
  * @route '/log-viewer/api/delete-multiple-files'
  */
 deleteMultipleFiles.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -423,7 +423,7 @@ deleteMultipleFiles.post = (options?: RouteQueryOptions): RouteDefinition<'post'
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMultipleFiles
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:89
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:98
  * @route '/log-viewer/api/delete-multiple-files'
  */
     const deleteMultipleFilesForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -433,7 +433,7 @@ deleteMultipleFiles.post = (options?: RouteQueryOptions): RouteDefinition<'post'
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::deleteMultipleFiles
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:89
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:98
  * @route '/log-viewer/api/delete-multiple-files'
  */
         deleteMultipleFilesForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -444,7 +444,7 @@ deleteMultipleFiles.post = (options?: RouteQueryOptions): RouteDefinition<'post'
     deleteMultipleFiles.form = deleteMultipleFilesForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
 export const download = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -459,7 +459,7 @@ download.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
 download.url = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -487,7 +487,7 @@ download.url = (args: { fileIdentifier: string | number } | [fileIdentifier: str
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
 download.get = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -496,7 +496,7 @@ download.get = (args: { fileIdentifier: string | number } | [fileIdentifier: str
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
 download.head = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -506,7 +506,7 @@ download.head = (args: { fileIdentifier: string | number } | [fileIdentifier: st
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
     const downloadForm = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -516,7 +516,7 @@ download.head = (args: { fileIdentifier: string | number } | [fileIdentifier: st
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
         downloadForm.get = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -525,7 +525,7 @@ download.head = (args: { fileIdentifier: string | number } | [fileIdentifier: st
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::download
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:43
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:52
  * @route '/log-viewer/api/files/{fileIdentifier}/download'
  */
         downloadForm.head = (args: { fileIdentifier: string | number } | [fileIdentifier: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({

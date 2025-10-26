@@ -157,7 +157,7 @@ folders.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     folders.form = foldersForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 export const files = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -172,7 +172,7 @@ files.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 files.url = (options?: RouteQueryOptions) => {
@@ -181,7 +181,7 @@ files.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 files.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -190,7 +190,7 @@ files.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
 files.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -200,7 +200,7 @@ files.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
     const filesForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -210,7 +210,7 @@ files.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
         filesForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -219,7 +219,7 @@ files.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\FilesController::files
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:13
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/FilesController.php:15
  * @route '/log-viewer/api/files'
  */
         filesForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -313,7 +313,7 @@ logs.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     logs.form = logsForm
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 export const index = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -328,7 +328,7 @@ index.definition = {
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 index.url = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -360,7 +360,7 @@ index.url = (args?: { view?: string | number } | [view: string | number ] | stri
 
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 index.get = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -369,7 +369,7 @@ index.get = (args?: { view?: string | number } | [view: string | number ] | stri
 })
 /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
 index.head = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -379,7 +379,7 @@ index.head = (args?: { view?: string | number } | [view: string | number ] | str
 
     /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
     const indexForm = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -389,7 +389,7 @@ index.head = (args?: { view?: string | number } | [view: string | number ] | str
 
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
         indexForm.get = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -398,7 +398,7 @@ index.head = (args?: { view?: string | number } | [view: string | number ] | str
         })
             /**
 * @see \Opcodes\LogViewer\Http\Controllers\IndexController::__invoke
- * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:11
+ * @see vendor/opcodesio/log-viewer/src/Http/Controllers/IndexController.php:12
  * @route '/log-viewer/{view?}'
  */
         indexForm.head = (args?: { view?: string | number } | [view: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
